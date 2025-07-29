@@ -1,239 +1,913 @@
-
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Shuo Tan – Ph.D. student in Electrical Engineering & Computer Science Department at UC Irvine. Fundamental research in information theory bridging mathematics, physics, and next‑generation network computing.">
-  <meta name="keywords" content="Shuo Tan, Information Theory, Coded Distributed Computing, EECS, UC Irvine, Syed Ali Jafar">
+  <meta name="description" content="Shuo Tan – Ph.D. student in Electrical Engineering & Computer Science at UC Irvine. Fundamental research in information theory bridging mathematics, physics, and network computing.">
+  <meta name="keywords" content="Shuo Tan, Information Theory, Coded Distributed Computing, EECS, UC Irvine">
   <meta name="author" content="Shuo Tan">
-  <title>Shuo Tan | Ph.D. Student, EECS @ UCI</title>
+  <meta property="og:title" content="Shuo Tan - Ph.D. Student, EECS @ UCI">
+  <meta property="og:description" content="Fundamental research in information theory and network computing">
+  <meta property="og:type" content="website">
+  <title>Shuo Tan</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            'uci-blue': '#0064A4',
-            'uci-gold': '#FFD200',
-            primary: '#1e40af'
+          fontFamily: {
+            'display': ['"SF Pro Display"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+            'body': ['"SF Pro Text"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'gradient': 'gradient 8s linear infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'glow': 'glow 2s ease-in-out infinite alternate',
+            'reveal': 'reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            'slide-in': 'slideIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            'pulse-slow': 'pulse 3s ease-in-out infinite',
+          },
+          keyframes: {
+            gradient: {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            glow: {
+              '0%': { boxShadow: '0 0 20px rgba(0, 100, 164, 0.1)' },
+              '100%': { boxShadow: '0 0 40px rgba(0, 100, 164, 0.2)' },
+            },
+            reveal: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            slideIn: {
+              '0%': { opacity: '0', transform: 'translateX(-20px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            }
+          },
+          backgroundImage: {
+            'noise': "url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
           }
         }
       }
     };
   </script>
   <style>
-    .gradient-bg{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%)}
-    .academic-shadow{box-shadow:0 10px 25px -5px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)}
-    .email-protection{display:none;}
+    /* Master-level typography */
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
     
-    /* Professional photo styles */
-    .profile-photo {
-      /* 如果照片放在根目录 */
-      background-image: url('./WechatIMG18232.jpg');
-      /* 如果照片放在images文件夹 */
-      /* background-image: url('./images/profile.jpg'); */
+    /* Noise texture overlay */
+    .noise-overlay::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    
+    /* Premium glass morphism */
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Dynamic gradient background */
+    .gradient-bg {
+      background: linear-gradient(-45deg, #f5f7fa, #c3cfe2, #e0eafc, #cfdef3);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+    
+    /* Premium hover states */
+    .premium-hover {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .premium-hover::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(0, 100, 164, 0.05);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    
+    .premium-hover:hover::before {
+      width: 300%;
+      height: 300%;
+    }
+    
+    /* Author highlighting */
+    .author-highlight {
+      background: linear-gradient(90deg, rgba(0, 100, 164, 0.1) 0%, rgba(0, 100, 164, 0.05) 100%);
+      padding: 1px 4px;
+      border-radius: 4px;
+      font-weight: 600;
+      color: #0064A4;
+    }
+    
+    /* Publication type badges */
+    .pub-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .pub-badge.preprint {
+      background: linear-gradient(90deg, #fef3c7, #fde68a);
+      color: #92400e;
+    }
+    
+    .pub-badge.patent {
+      background: linear-gradient(90deg, #ddd6fe, #c4b5fd);
+      color: #7c3aed;
+    }
+    
+    /* Magnetic cursor effect */
+    .magnetic {
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    /* Selection style */
+    ::selection {
+      background: rgba(0, 100, 164, 0.15);
+      color: #0064A4;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #c1c1c1;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a1a1a1;
+    }
+    
+    /* Email security */
+    .email-secure {
+      unicode-bidi: bidi-override;
+      direction: rtl;
+      display: inline-block;
+    }
+    
+    .email-part {
+      unicode-bidi: bidi-override;
+      direction: ltr;
+      display: inline-block;
+    }
+    
+    /* Loading animation */
+    .skeleton {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+    }
+    
+    @keyframes loading {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+    
+    /* Profile image with fallback */
+    .profile-image {
+      background-image: url('./WechatIMG18232.jpg'), 
+                        linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       background-size: cover;
       background-position: center;
-      background-repeat: no-repeat;
     }
     
-    /* Hover effects for professional touch */
-    .profile-container:hover .profile-photo {
-      transform: scale(1.05);
-      transition: transform 0.3s ease;
+    /* Timeline styles */
+    .timeline-item {
+      position: relative;
+      padding-left: 24px;
     }
     
-    /* Academic border styling */
-    .academic-border {
-      border: 4px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    
+    .timeline-item.current::before {
+      background: #0064A4;
+      box-shadow: 0 0 0 4px rgba(0, 100, 164, 0.2);
+    }
+    
+    .timeline-item.past::before {
+      background: #22c55e;
+    }
+    
+    /* Accessibility focus states */
+    *:focus {
+      outline: none;
+    }
+    
+    *:focus-visible {
+      outline: 2px solid #0064A4;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+    
+    /* Performance optimizations */
+    .will-change-transform {
+      will-change: transform;
+    }
+    
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-blue-50 text-gray-800 antialiased leading-relaxed min-h-screen">
-  <!-- Header with Photo Integration -->
-  <header class="gradient-bg text-white academic-shadow rounded-b-3xl pb-16">
-    <div class="max-w-6xl mx-auto px-6 pt-12">
-      <div class="text-center mb-8">
-        <div class="profile-container inline-block mb-6">
-          <div class="profile-photo academic-border w-32 h-32 rounded-full mx-auto">
-          </div>
+<body class="font-body gradient-bg min-h-screen text-gray-900 antialiased relative">
+  <!-- Noise texture overlay -->
+  <div class="noise-overlay fixed inset-0 pointer-events-none z-0"></div>
+  
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="font-display font-semibold text-lg magnetic hover:text-blue-700 transition-colors">
+          Shuo Tan
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="nav-link relative text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors">
+            About
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300"></span>
+          </a>
+          <a href="#research" class="nav-link relative text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors">
+            Research
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300"></span>
+          </a>
+          <a href="#publications" class="nav-link relative text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors">
+            Publications
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300"></span>
+          </a>
+          <a href="#contact" class="premium-hover px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-all hover:scale-105">
+            Contact
+          </a>
         </div>
-        <h1 class="text-5xl font-extrabold tracking-tight mb-3">Shuo Tan</h1>
-        <p class="text-xl">Ph.D. Student · Electrical Engineering &amp; Computer Science</p>
-        <p class="text-lg opacity-90 mb-4">University of California, Irvine</p>
-        <p class="max-w-2xl mx-auto text-base font-light">Fundamental research bridging <strong>mathematics</strong> &amp; <strong>physics</strong> to advance <strong>network computing</strong> through information‑theoretic principles.</p>
+        
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden p-2 rounded-lg hover:bg-gray-100/50 transition-colors" id="mobile-menu-btn">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative pt-32 pb-24 px-6 overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl animate-float"></div>
+      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl animate-float" style="animation-delay: 3s;"></div>
+    </div>
+    
+    <div class="relative max-w-5xl mx-auto text-center">
+      <!-- Profile Photo -->
+      <div class="relative inline-block mb-8 animate-reveal">
+        <div class="profile-image w-36 h-36 rounded-full ring-4 ring-white shadow-2xl animate-glow"></div>
+        <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white animate-pulse-slow"></div>
       </div>
       
-      <div class="flex justify-center space-x-6">
-        <a href="#" id="email-btn" class="bg-white/20 hover:bg-white/30 px-5 py-2.5 rounded-full text-sm font-medium transition backdrop-blur-sm">📧 Email</a>
-        <a href="#research" class="bg-white/20 hover:bg-white/30 px-5 py-2.5 rounded-full text-sm font-medium transition backdrop-blur-sm">🔬 Research</a>
-        <a href="#publications" class="bg-white/20 hover:bg-white/30 px-5 py-2.5 rounded-full text-sm font-medium transition backdrop-blur-sm">📄 Publications</a>
+      <!-- Name and Title -->
+      <h1 class="font-display text-6xl font-bold tracking-tight mb-4 animate-reveal" style="animation-delay: 0.1s;">
+        Shuo Tan
+      </h1>
+      
+      <p class="text-2xl text-gray-700 mb-2 animate-reveal" style="animation-delay: 0.2s;">
+        Ph.D. Student in Electrical Engineering & Computer Science
+      </p>
+      
+      <p class="text-xl text-gray-600 mb-8 animate-reveal" style="animation-delay: 0.3s;">
+        University of California, Irvine
+      </p>
+      
+      <!-- Tagline -->
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed animate-reveal" style="animation-delay: 0.4s;">
+        Pioneering fundamental research at the intersection of <span class="font-semibold text-blue-700">mathematics</span>, 
+        <span class="font-semibold text-purple-700">physics</span>, and <span class="font-semibold text-green-700">network computing</span> 
+        through information-theoretic principles.
+      </p>
+      
+      <!-- Quick Actions -->
+      <div class="flex flex-wrap justify-center gap-4 mt-10 animate-reveal" style="animation-delay: 0.5s;">
+        <a href="#publications" class="premium-hover px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-all hover:scale-105 shadow-lg">
+          View Publications
+        </a>
+        <button id="contact-btn" class="premium-hover px-6 py-3 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-50 transition-all hover:scale-105 shadow-lg border border-gray-200">
+          Get in Touch
+        </button>
       </div>
     </div>
   </header>
 
-  <main id="main" class="max-w-6xl mx-auto px-6 pt-20 pb-24 grid lg:grid-cols-3 gap-10">
-    <!-- Main column -->
-    <div class="lg:col-span-2 space-y-10">
-      <!-- About -->
-      <section id="about" class="bg-white academic-shadow rounded-2xl p-8">
-        <h2 class="text-3xl font-bold mb-6 flex items-center"><span class="w-8 h-8 bg-primary rounded-lg mr-3 flex items-center justify-center text-white text-sm">👋</span>About Me</h2>
-        <p class="mb-4 text-lg">I am an incoming 25fall Ph.D. student in the <strong>Electrical Engineering &amp; Computer Science</strong> department at <strong>UC Irvine</strong>, advised by <a href="https://scholar.google.com/citations?user=UK-6ck8AAAAJ" target="_blank" class="text-primary underline font-semibold">Prof. Syed Ali Jafar</a>. My research employs <strong>theoretical mathematics</strong> and <strong>theoretical physics models</strong> as essential analytical tools to characterize the <strong>fundamental limits and capacity</strong> of communication and computation in network computing systems.</p>
-        <p class="text-lg">I am awarded by the <strong>UCI EECS Department Fellowship</strong>.</p>
-      </section>
+  <!-- Main Content -->
+  <main class="relative max-w-7xl mx-auto px-6 pb-24">
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Main Column -->
+      <div class="lg:col-span-2 space-y-8">
+        <!-- About Section -->
+        <section id="about" class="glass rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-500 will-change-transform">
+          <h2 class="font-display text-3xl font-bold mb-6 flex items-center">
+            <span class="w-1 h-8 bg-blue-600 rounded-full mr-4"></span>
+            About
+          </h2>
+          
+          <div class="prose prose-lg text-gray-700 leading-relaxed">
+            <p class="mb-6">
+              I am an incoming Fall 2025 Ph.D. student in the Department of 
+              <strong>Electrical Engineering & Computer Science</strong> at 
+              <strong>UC Irvine</strong>, where I will be working with 
+              <a href="https://scholar.google.com/citations?user=UK-6ck8AAAAJ" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 class="text-blue-600 hover:text-blue-800 underline decoration-2 underline-offset-2 transition-colors">
+                Prof. Syed Ali Jafar
+              </a>.
+            </p>
+            
+            <p class="mb-6">
+              My research employs <em>theoretical mathematics</em> and <em>theoretical physics models</em> 
+              as essential analytical tools to characterize the fundamental limits and capacity of 
+              communication and computation in network computing systems.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+              <p class="text-blue-900 font-medium">
+                🎓 Recipient of the <strong>UCI EECS Department Fellowship</strong>
+              </p>
+            </div>
+          </div>
+        </section>
 
-      <!-- Research Interests -->
-      <section id="research" class="bg-white academic-shadow rounded-2xl p-8">
-        <h2 class="text-3xl font-bold mb-6 flex items-center"><span class="w-8 h-8 bg-green-600 rounded-lg mr-3 flex items-center justify-center text-white text-sm">🔬</span>Research Interests</h2>
-        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border-l-4 border-blue-600">
-          <h3 class="font-semibold text-gray-900 mb-1">Information Theory</h3>
-          <p class="text-gray-700 text-sm">Specailly, the theoretical capacity analysis of network computing systems and emerging theoretical physics methods' application in them.</p>
-        </div>
-      </section>
+        <!-- Research Interests -->
+        <section id="research" class="glass rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-500">
+          <h2 class="font-display text-3xl font-bold mb-6 flex items-center">
+            <span class="w-1 h-8 bg-green-600 rounded-full mr-4"></span>
+            Research Interests
+          </h2>
+          
+          <div class="grid gap-6">
+            <div class="group premium-hover bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200 hover:border-blue-400 transition-all">
+              <h3 class="font-semibold text-xl text-gray-900 mb-3 group-hover:text-blue-700 transition-colors">
+                Information Theory
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Specializing in theoretical capacity analysis of network computing systems and the 
+                application of emerging theoretical physics methods to understand their fundamental limits.
+              </p>
+            </div>
+          </div>
+        </section>
 
-      <!-- Publications -->
-      <section id="publications" class="bg-white academic-shadow rounded-2xl p-8">
-        <h2 class="text-3xl font-bold mb-6 flex items-center"><span class="w-8 h-8 bg-indigo-600 rounded-lg mr-3 flex items-center justify-center text-white text-sm">📚</span>Selected Publications</h2>
-        
-        <!-- Past Work Section -->
-        <div class="mb-8">
-          <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-            <span class="w-4 h-4 bg-green-600 rounded mr-2"></span>
-            Past Work (undergraduate)
-          </h3>
-          <article class="bg-green-50 border-l-4 border-green-600 p-4 rounded-r-lg">
-            <h4 class="font-semibold mb-2">Flexible Coded Distributed Convolution Computing for Enhanced Straggler Resilience and Numerical Stability in Distributed CNNs</h4>
-            <p class="text-sm text-gray-600 mb-1">arXiv:2411.01579 (2024) · First Author&nbsp;<a href="https://arxiv.org/abs/2411.01579" target="_blank" class="text-primary underline">[PDF]</a></p>
-            <p class="text-xs text-gray-500 italic">Research conducted during undergraduate studies at Chongqing University</p>
-          </article>
-        </div>
+        <!-- Publications -->
+        <section id="publications" class="glass rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-500">
+          <h2 class="font-display text-3xl font-bold mb-6 flex items-center">
+            <span class="w-1 h-8 bg-purple-600 rounded-full mr-4"></span>
+            Publications & Patents
+          </h2>
+          
+          <!-- Preprints -->
+          <div class="mb-10">
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="text-sm font-bold text-gray-600 uppercase tracking-wider">
+                Preprints
+              </h3>
+              <span class="pub-badge preprint">
+                📄 Manuscript
+              </span>
+            </div>
+            
+            <article class="group premium-hover bg-white p-6 rounded-xl border border-gray-200 hover:border-gray-400 transition-all hover:shadow-lg">
+              <h4 class="font-semibold text-lg mb-3 group-hover:text-blue-700 transition-colors">
+                Flexible Coded Distributed Convolution Computing for Enhanced Straggler 
+                Resilience and Numerical Stability in Distributed CNNs
+              </h4>
+              
+              <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                  <span class="author-highlight">S. Tan</span>, R. Liu, X. Han, X. Long, K. Wan, L. Song, Y. Li
+                </p>
+                <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 mt-2">
+                  <span>arXiv:2411.01579</span>
+                  <span>•</span>
+                  <span>2024</span>
+                  <span>•</span>
+                  <span class="text-blue-600 font-medium">First Author</span>
+                </div>
+              </div>
+              
+              <div class="flex flex-wrap gap-3">
+                <a href="https://arxiv.org/abs/2411.01579" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors font-medium text-sm">
+                  <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 00-2 2v6a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-1a1 1 0 100-2h1a4 4 0 014 4v6a4 4 0 01-4 4H6a4 4 0 01-4-4V7a4 4 0 014-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  View on arXiv
+                </a>
+              </div>
+            </article>
+          </div>
+          
+          <!-- Patents -->
+          <div class="mb-10">
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="text-sm font-bold text-gray-600 uppercase tracking-wider">
+                Patents
+              </h3>
+              <span class="pub-badge patent">
+                🔧 Patent
+              </span>
+            </div>
+            
+            <article class="group premium-hover bg-white p-6 rounded-xl border border-gray-200 hover:border-gray-400 transition-all hover:shadow-lg">
+              <h4 class="font-semibold text-lg mb-3 group-hover:text-purple-700 transition-colors">
+                A Method for Accelerating Convolutional Layers in Convolutional Neural Networks   
+                Based on Coded Distributed Computing
+              </h4>
+              
+              <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                  Y. Li, <span class="author-highlight">S. Tan</span>, R. Liu
+                </p>
+                <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 mt-2">
+                  <span>C.N. Patent Application Number: 2024115537747</span>
+                  <span>•</span>
+                  <span class="text-purple-600 font-medium">Co-inventor</span>
+                </div>
+              </div>
+              
+              <div class="bg-purple-50 border border-purple-200 rounded-lg p-3">
+                <p class="text-purple-800 text-sm">
+                  <span class="font-medium">Status:</span> Patent Application Filed
+                </p>
+              </div>
+            </article>
+          </div>
+          
+          <!-- Upcoming Work -->
+          <div class="bg-gradient-to-r from-gray-50 to-blue-50 p-6 rounded-xl border border-gray-200">
+            <div class="flex items-center justify-center space-x-3">
+              <div class="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></div>
+              <p class="text-gray-700 font-medium">
+                Ph.D. research at UC Irvine starting Fall 2025
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
 
-        <!-- Future Work Placeholder -->
-        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
-          <p class="text-blue-700 text-center font-medium text-sm">
-            🔬 Current Ph.D. research at UC Irvine in progress
-          </p>
+      <!-- Sidebar -->
+      <aside class="space-y-6">
+        <!-- Quick Info Card -->
+        <div class="glass rounded-2xl p-6 shadow-xl sticky top-24">
+          <div class="text-center mb-6">
+            <div class="profile-image w-20 h-20 rounded-full mx-auto mb-3"></div>
+            <h3 class="font-display font-semibold text-lg">Shuo Tan</h3>
+            <p class="text-sm text-gray-600">Ph.D. Student</p>
+          </div>
+          
+          <!-- Education Timeline -->
+          <div class="space-y-4 mb-6">
+            <h4 class="font-semibold text-sm text-gray-700 uppercase tracking-wider">Education</h4>
+            
+            <div class="space-y-4">
+              <div class="timeline-item current">
+                <div class="mb-2">
+                  <p class="font-medium text-sm">Ph.D. in ECE</p>
+                  <p class="text-xs text-gray-600">UC Irvine</p>
+                  <p class="text-xs text-gray-500">2025 – Present</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item past">
+                <div>
+                  <p class="font-medium text-sm">B.Eng. in Computer Science</p>
+                  <p class="text-xs text-gray-600">Chongqing University</p>
+                  <p class="text-xs text-gray-500">2021 – 2025</p>
+                  <p class="text-xs text-gray-500 mt-1">GPA: 90.66/100</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Awards with detailed information -->
+          <div class="space-y-4 mb-6">
+            <h4 class="font-semibold text-sm text-gray-700 uppercase tracking-wider">Honors & Awards</h4>
+            <div class="space-y-4">
+              <div class="timeline-item current">
+                <div>
+                  <p class="font-medium text-sm">UCI EECS Department Fellowship</p>
+                  <p class="text-xs text-gray-600">University of California, Irvine</p>
+                  <p class="text-xs text-gray-500">2025</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item past">
+                <div>
+                  <p class="font-medium text-sm">Outstanding Undergraduate Student</p>
+                  <p class="text-xs text-gray-600">Chongqing University</p>
+                  <p class="text-xs text-gray-500">2022, 2023, 2024</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item past">
+                <div>
+                  <p class="font-medium text-sm">First-Class Scholarship</p>
+                  <p class="text-xs text-gray-600">Chongqing University (Top 3%)</p>
+                  <p class="text-xs text-gray-500">2022</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Contact -->
+          <div id="contact" class="pt-6 border-t border-gray-200">
+            <h4 class="font-semibold text-sm text-gray-700 uppercase tracking-wider mb-3">Contact</h4>
+            <div class="space-y-3">
+              <div>
+                <p class="text-xs text-gray-600 mb-1">Email (click to reveal)</p>
+                <button id="email-reveal" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                  [Protected Email]
+                </button>
+                <div id="email-container" class="hidden text-sm text-gray-700 mt-1"></div>
+              </div>
+              <div>
+                <p class="text-xs text-gray-600 mb-1">Location</p>
+                <p class="text-sm">Irvine, CA 92697</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </aside>
     </div>
-
-    <!-- Sidebar -->
-    <aside class="space-y-8">
-      <!-- Education -->
-      <div class="bg-white academic-shadow rounded-2xl p-6">
-        <h3 class="text-xl font-bold mb-4 flex items-center"><span class="w-6 h-6 bg-uci-blue rounded mr-2 flex items-center justify-center text-white text-xs">🎓</span>Education</h3>
-        <div class="space-y-5">
-          <div class="border-l-4 border-primary pl-4">
-            <h4 class="font-semibold">Ph.D. Electrical and Computer Engineering</h4>
-            <p class="text-sm text-gray-600">University of California, Irvine</p>
-            <p class="text-xs text-gray-500">2025 – Present</p>
-            <p class="mt-1 text-xs"><span class="bg-primary/10 text-primary px-1.5 py-0.5 rounded-full">EECS Fellowship</span></p>
-            <p class="text-xs text-gray-600 mt-1">Advisor: <a href="https://scholar.google.com/citations?user=UK-6ck8AAAAJ" target="_blank" class="text-primary underline">Prof. Syed A. Jafar</a></p>
-          </div>
-          <div class="border-l-4 border-green-500 pl-4">
-            <h4 class="font-semibold">B.Eng. Computer Science (with Honors)</h4>
-            <p class="text-sm text-gray-600">Chongqing University</p>
-            <p class="text-xs text-gray-500">2021 – 2025</p>
-            <p class="mt-1 text-xs"><span class="bg-green-500/10 text-green-700 px-1.5 py-0.5 rounded-full">GPA: 90.66/100</span></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Awards -->
-      <div class="bg-white academic-shadow rounded-2xl p-6">
-        <h3 class="text-xl font-bold mb-4 flex items-center"><span class="w-6 h-6 bg-uci-gold rounded mr-2 flex items-center justify-center text-white text-xs">🏆</span>Awards & Honors</h3>
-        <ul class="space-y-3 text-sm">
-          <li class="flex items-start">
-            <span class="w-2 h-2 bg-uci-gold rounded-full mt-2 mr-2 flex-shrink-0"></span>
-            <div>
-              <span class="font-medium">UCI EECS Department Fellowship</span>
-              <p class="text-xs text-gray-500">University of California, Irvine, 2025</p>
-            </div>
-          </li>
-          <li class="flex items-start">
-            <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-2 flex-shrink-0"></span>
-            <div>
-              <span class="font-medium">Outstanding Undergraduate Student</span>
-              <p class="text-xs text-gray-500">Chongqing University, 2022, 2023, 2024</p>
-            </div>
-          </li>
-          <li class="flex items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-2 flex-shrink-0"></span>
-            <div>
-              <span class="font-medium">First-Class Scholarship (Top 3%)</span>
-              <p class="text-xs text-gray-500">Chongqing University, 2022</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Contact -->
-      <div class="bg-white academic-shadow rounded-2xl p-6" id="contact">
-        <h3 class="text-xl font-bold mb-4 flex items-center"><span class="w-6 h-6 bg-gray-700 rounded mr-2 flex items-center justify-center text-white text-xs">📧</span>Contact</h3>
-        <p class="text-sm mb-2"><strong>Email:</strong>&nbsp;
-          <span class="email-protection">nospam</span>
-          <span id="email-display" class="text-primary underline cursor-pointer" data-user="shuot8" data-domain="uci.edu">
-            shuot8<span class="email-protection">removeme</span>&#64;<!-- -->uci<!-- --><span class="email-protection">spam</span>&#46;edu
-          </span>
-        </p>
-        <p class="text-sm"><strong>Office:</strong>&nbsp;EECS Department, UC Irvine, CA 92697</p>
-      </div>
-    </aside>
   </main>
 
   <!-- Footer -->
-  <footer class="text-center py-8 border-t">
-    <p class="text-sm text-gray-500">&copy; <span id="year"></span> Shuo Tan. All rights reserved.</p>
+  <footer class="relative border-t border-gray-200 bg-white/50 backdrop-blur-lg">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+      <div class="text-center">
+        <p class="text-sm text-gray-600 mb-2">
+          © <span id="year"></span> Shuo Tan. All rights reserved.
+        </p>
+        <p class="text-xs text-gray-500">
+          Built with passion for advancing the frontiers of information theory
+        </p>
+      </div>
+    </div>
   </footer>
 
-  <script>
-    // Email protection functionality
-    function initEmailProtection() {
-      const emailDisplay = document.getElementById('email-display');
-      const emailBtn = document.getElementById('email-btn');
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-black/50" id="mobile-menu-backdrop"></div>
+    <div class="absolute right-0 top-0 h-full w-72 glass p-6 transform translate-x-full transition-transform duration-300" id="mobile-menu-panel">
+      <button class="absolute top-6 right-6 p-2 rounded-lg hover:bg-gray-100/50" id="mobile-menu-close">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
       
-      function createEmailLink() {
-        const user = emailDisplay.dataset.user;
-        const domain = emailDisplay.dataset.domain;
-        const email = user + '@' + domain;
-        
-        emailDisplay.innerHTML = email;
-        emailDisplay.onclick = function() {
-          window.location.href = 'mailto:' + email;
-        };
-        
-        if (emailBtn) {
-          emailBtn.href = 'mailto:' + email;
-        }
+      <nav class="mt-12 space-y-4">
+        <a href="#about" class="block py-2 text-lg font-medium text-gray-700 hover:text-gray-900">About</a>
+        <a href="#research" class="block py-2 text-lg font-medium text-gray-700 hover:text-gray-900">Research</a>
+        <a href="#publications" class="block py-2 text-lg font-medium text-gray-700 hover:text-gray-900">Publications</a>
+        <a href="#contact" class="block py-2 text-lg font-medium text-gray-700 hover:text-gray-900">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <script>
+    // Email protection with advanced obfuscation
+    class EmailProtection {
+      constructor() {
+        this.user = 'shuot8';
+        this.domain = 'uci.edu';
+        this.setupEventListeners();
       }
       
-      // Create email link on page load
-      createEmailLink();
+      setupEventListeners() {
+        const revealBtn = document.getElementById('email-reveal');
+        const contactBtn = document.getElementById('contact-btn');
+        
+        revealBtn?.addEventListener('click', (e) => {
+          e.preventDefault();
+          this.revealEmail();
+        });
+        
+        contactBtn?.addEventListener('click', (e) => {
+          e.preventDefault();
+          document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        });
+      }
       
-      // Also create on hover for extra protection
-      emailDisplay.addEventListener('mouseenter', createEmailLink);
+      revealEmail() {
+        const container = document.getElementById('email-container');
+        const revealBtn = document.getElementById('email-reveal');
+        const email = `${this.user}@${this.domain}`;
+        
+        // Animate reveal
+        container.innerHTML = `
+          <a href="mailto:${email}" class="text-blue-600 hover:text-blue-800 transition-colors">
+            ${email}
+          </a>
+        `;
+        container.classList.remove('hidden');
+        container.classList.add('animate-slide-in');
+        revealBtn.style.display = 'none';
+        
+        // Copy to clipboard functionality
+        setTimeout(() => {
+          container.innerHTML += `
+            <button class="ml-2 text-xs text-gray-500 hover:text-gray-700 transition-colors" onclick="navigator.clipboard.writeText('${email}').then(() => this.textContent = 'Copied!')">
+              Copy
+            </button>
+          `;
+        }, 300);
+      }
     }
     
-    // Initialize when DOM is ready
-    document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('year').textContent = new Date().getFullYear();
-      initEmailProtection();
+    // Mobile menu controller
+    class MobileMenu {
+      constructor() {
+        this.menu = document.getElementById('mobile-menu');
+        this.panel = document.getElementById('mobile-menu-panel');
+        this.setupEventListeners();
+      }
       
-      // Smooth scrolling
-      document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', e => {
-          if (a.getAttribute('href') !== '#') {
-            e.preventDefault();
-            document.querySelector(a.getAttribute('href')).scrollIntoView({
-              behavior: 'smooth'
-            });
+      setupEventListeners() {
+        document.getElementById('mobile-menu-btn')?.addEventListener('click', () => this.open());
+        document.getElementById('mobile-menu-close')?.addEventListener('click', () => this.close());
+        document.getElementById('mobile-menu-backdrop')?.addEventListener('click', () => this.close());
+        
+        // Close on navigation
+        this.menu?.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => this.close());
+        });
+      }
+      
+      open() {
+        this.menu.classList.remove('hidden');
+        setTimeout(() => {
+          this.panel.classList.remove('translate-x-full');
+        }, 10);
+      }
+      
+      close() {
+        this.panel.classList.add('translate-x-full');
+        setTimeout(() => {
+          this.menu.classList.add('hidden');
+        }, 300);
+      }
+    }
+    
+    // Smooth scroll with offset
+    class SmoothScroll {
+      constructor() {
+        this.offset = 80;
+        this.setupEventListeners();
+      }
+      
+      setupEventListeners() {
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+          link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href !== '#') {
+              e.preventDefault();
+              this.scrollToElement(href);
+            }
+          });
+        });
+      }
+      
+      scrollToElement(selector) {
+        const element = document.querySelector(selector);
+        if (element) {
+          const top = element.offsetTop - this.offset;
+          window.scrollTo({
+            top: top,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
+    
+    // Intersection Observer for animations
+    class ScrollAnimations {
+      constructor() {
+        this.observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+        this.setupObserver();
+      }
+      
+      setupObserver() {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, this.observerOptions);
+        
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+          section.style.opacity = '0';
+          section.style.transform = 'translateY(20px)';
+          section.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+          observer.observe(section);
+        });
+      }
+    }
+    
+    // Navigation highlight on scroll
+    class NavigationHighlight {
+      constructor() {
+        this.sections = document.querySelectorAll('section[id]');
+        this.navLinks = document.querySelectorAll('.nav-link');
+        this.setupScrollListener();
+      }
+      
+      setupScrollListener() {
+        let ticking = false;
+        
+        const updateHighlight = () => {
+          const scrollPos = window.scrollY + 100;
+          
+          this.sections.forEach((section, index) => {
+            const top = section.offsetTop;
+            const bottom = top + section.offsetHeight;
+            
+            if (scrollPos >= top && scrollPos < bottom) {
+              this.navLinks.forEach(link => {
+                link.classList.remove('text-gray-900');
+                link.querySelector('span').style.width = '0';
+              });
+              
+              const activeLink = document.querySelector(`a[href="#${section.id}"].nav-link`);
+              if (activeLink) {
+                activeLink.classList.add('text-gray-900');
+                activeLink.querySelector('span').style.width = '100%';
+              }
+            }
+          });
+          
+          ticking = false;
+        };
+        
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            window.requestAnimationFrame(updateHighlight);
+            ticking = true;
           }
         });
+      }
+    }
+    
+    // Initialize everything when DOM is ready
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set current year
+      document.getElementById('year').textContent = new Date().getFullYear();
+      
+      // Initialize modules
+      new EmailProtection();
+      new MobileMenu();
+      new SmoothScroll();
+      new ScrollAnimations();
+      new NavigationHighlight();
+      
+      // Add visible class to sections after animations setup
+      setTimeout(() => {
+        document.querySelectorAll('section').forEach(section => {
+          section.style.opacity = '1';
+          section.style.transform = 'translateY(0)';
+        });
+      }, 100);
+      
+      // Magnetic cursor effect for interactive elements
+      document.querySelectorAll('.magnetic').forEach(elem => {
+        elem.addEventListener('mousemove', (e) => {
+          const rect = elem.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          
+          elem.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+        });
+        
+        elem.addEventListener('mouseleave', () => {
+          elem.style.transform = 'translate(0, 0)';
+        });
       });
+      
+      // Performance optimization: Lazy load images
+      if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.classList.add('loaded');
+              observer.unobserve(img);
+            }
+          });
+        });
+        
+        document.querySelectorAll('.profile-image').forEach(img => {
+          imageObserver.observe(img);
+        });
+      }
+    });
+    
+    // Handle visibility change for performance
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        // Pause animations when tab is not visible
+        document.querySelectorAll('[class*="animate-"]').forEach(elem => {
+          elem.style.animationPlayState = 'paused';
+        });
+      } else {
+        // Resume animations
+        document.querySelectorAll('[class*="animate-"]').forEach(elem => {
+          elem.style.animationPlayState = 'running';
+        });
+      }
     });
   </script>
-</body>
+<script>window.parent.postMessage({ action: "ready" }, "*"); 
+ 
+window.console = new Proxy(console, {
+  get(target, prop) {
+    if (['log', 'warn', 'error'].includes(prop)) {
+      return new Proxy(target[prop], {
+        apply(fn, thisArg, args) {
+          fn.apply(thisArg, args);
+          window.parent.postMessage({ action: 'console', 
+            type: prop, 
+            args: args.map((arg) => {
+              try {
+                return JSON.stringify(arg).replace(/^["']|["']$/g, '');
+              } catch (e) {
+                return arg;
+              }
+            }) 
+          }, '*');
+        }
+      });
+    }
+    return target[prop];
+  }
+});
+</script></body>
 </html>
+
 
