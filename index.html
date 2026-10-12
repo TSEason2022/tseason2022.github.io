@@ -414,27 +414,27 @@
             Publications & Patents
           </h2>
           
-                    <!-- Preprints Section - Expert Level Optimization -->
-          <div class="publication-section mb-12">
+          <!-- Journal Articles -->
+          <div class="publication-section mb-12" id="journal-publications">
             <div class="section-header flex items-center justify-between mb-8">
               <h3 class="section-title text-sm font-bold text-gray-700 uppercase tracking-wider flex items-center">
-                <span class="section-indicator w-1 h-6 bg-blue-600 rounded-full mr-3"></span>
-                Preprints
+                <span class="section-indicator w-1 h-6 bg-green-600 rounded-full mr-3"></span>
+                Journal Articles
               </h3>
-              <div class="publication-badge preprint">
-                <span class="badge-icon">📄</span>
-                <span class="badge-text">Manuscript</span>
+              <div class="publication-badge journal">
+                <span class="badge-icon" aria-hidden="true">✓</span>
+                <span class="badge-text">Published</span>
               </div>
             </div>
             
             <article class="publication-card group mb-6">
               <!-- Paper Title -->
               <h4 class="paper-title">
-                <a href="https://arxiv.org/abs/2608.05692" 
+                <a href="https://ieeexplore.ieee.org/document/11733873" 
                    target="_blank" 
                    rel="noopener noreferrer"
                    class="title-link"
-                   onclick="trackPublication('arxiv', '2608.05692')">
+                   onclick="trackPublication('ieee', '11733873')">
                   Wireless Linear Computation Broadcast
                 </a>
               </h4>
@@ -447,41 +447,58 @@
                 </p>
                 
                 <!-- Publication Meta -->
+                <p class="publication-venue">IEEE Transactions on Communications</p>
                 <div class="publication-meta">
-                  <span class="meta-item arxiv-id">arXiv:2608.05692</span>
+                  <span class="meta-item publication-status">Early Access</span>
                   <span class="meta-separator">•</span>
-                  <span class="meta-item year">2026</span>
+                  <time class="meta-item publication-date" datetime="2026-10-12">October 12, 2026</time>
                   <span class="meta-separator">•</span>
                   <span class="meta-item author-status">First Author</span>
                 </div>
+                <p class="publication-doi">
+                  DOI: <a href="https://doi.org/10.1109/TCOMM.2026.3742805" target="_blank" rel="noopener noreferrer">10.1109/TCOMM.2026.3742805</a>
+                </p>
               </div>
               
               <!-- Action Buttons -->
               <div class="action-buttons">
-                <!-- Primary arXiv Link -->
-                <a href="https://arxiv.org/abs/2608.05692" 
+                <!-- Primary IEEE Link -->
+                <a href="https://ieeexplore.ieee.org/document/11733873" 
                    target="_blank" 
                    rel="noopener noreferrer"
-                   class="btn btn-primary arxiv-btn"
-                   onclick="trackClick('arxiv-primary', '2608.05692'); return true;">
+                   class="btn btn-primary ieee-btn"
+                   onclick="trackClick('ieee-primary', '11733873'); return true;">
                   <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
                     <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 00-2 2v6a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-1a1 1 0 100-2h1a4 4 0 014 4v6a4 4 0 01-4 4H6a4 4 0 01-4-4V7a4 4 0 014-4z" clip-rule="evenodd"/>
                   </svg>
-                  <span class="btn-text">View on arXiv</span>
+                  <span class="btn-text">View on IEEE</span>
                   <span class="btn-shortcut">↗</span>
                 </a>
                 
                 <!-- PDF Direct Link -->
-                <a href="https://arxiv.org/pdf/2608.05692.pdf" 
+                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=11733873" 
                    target="_blank" 
                    rel="noopener noreferrer"
                    class="btn btn-secondary pdf-btn"
-                   onclick="trackClick('pdf-direct', '2608.05692'); return true;">
+                   onclick="trackClick('pdf-direct', '11733873'); return true;">
                   <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
                   </svg>
                   <span class="btn-text">PDF</span>
+                </a>
+                
+                <!-- Original preprint -->
+                <a href="https://arxiv.org/abs/2608.05692"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-secondary arxiv-btn"
+                   onclick="trackClick('arxiv-secondary', '2608.05692'); return true;">
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 00-2 2v6a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-1a1 1 0 100-2h1a4 4 0 014 4v6a4 4 0 01-4 4H6a4 4 0 01-4-4V7a4 4 0 014-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="btn-text">arXiv</span>
                 </a>
                 
                 <!-- Copy Citation -->
@@ -497,7 +514,7 @@
                 
                 <!-- Share Button -->
                 <button class="btn btn-secondary share-btn" 
-                        onclick="sharePublication('https://arxiv.org/abs/2608.05692', 'Wireless Linear Computation Broadcast')"
+                        onclick="sharePublication('https://ieeexplore.ieee.org/document/11733873', 'Wireless Linear Computation Broadcast')"
                         data-tooltip="Share this paper">
                   <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/>
@@ -507,6 +524,108 @@
               </div>
             </article>
 
+            <article class="publication-card group">
+              <!-- Paper Title -->
+              <h4 class="paper-title">
+                <a href="https://ieeexplore.ieee.org/abstract/document/11720299/" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="title-link"
+                   onclick="trackPublication('ieee', '11720299')">
+                  Flexible Coded Distributed Convolution Computing for Resource-Constrained Remote-Sensing CNN Inference
+                </a>
+              </h4>
+              
+              <!-- Authors -->
+              <div class="authors-section mb-4">
+                <p class="authors-list">
+                  <span class="author-name">R. Liu</span><span class="author-separator">,</span>
+                  <span class="author-name author-highlight">S. Tan</span><span class="author-separator">,</span>
+                  <span class="author-name">X. Han</span><span class="author-separator">,</span>
+                  <span class="author-name">C. Fu</span><span class="author-separator">,</span>
+                  <span class="author-name">F. Luo</span><span class="author-separator">,</span>
+                  <span class="author-name">K. Wan</span><span class="author-separator">,</span>
+                  <span class="author-name">L. Song</span><span class="author-separator">,</span>
+                  <span class="author-name">C. Pu</span><span class="author-separator">,</span>
+                  <span class="author-name">Y. Li</span>
+                </p>
+                
+                <!-- Publication Meta -->
+                <p class="publication-venue">IEEE Journal on Miniaturization for Air and Space Systems</p>
+                <div class="publication-meta">
+                  <span class="meta-item publication-status">Published</span>
+                  <span class="meta-separator">•</span>
+                  <time class="meta-item publication-date" datetime="2026-10-05">October 5, 2026</time>
+                  <span class="meta-separator">•</span>
+                  <span class="meta-item author-status">Co-author</span>
+                </div>
+              </div>
+              
+              <!-- Action Buttons -->
+              <div class="action-buttons">
+                <!-- Primary IEEE Link -->
+                <a href="https://ieeexplore.ieee.org/abstract/document/11720299/" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="btn btn-primary ieee-btn"
+                   onclick="trackClick('ieee-primary', '11720299'); return true;">
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 00-2 2v6a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-1a1 1 0 100-2h1a4 4 0 014 4v6a4 4 0 01-4 4H6a4 4 0 01-4-4V7a4 4 0 014-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="btn-text">View on IEEE</span>
+                  <span class="btn-shortcut">↗</span>
+                </a>
+                
+                <!-- PDF Direct Link -->
+                <a href="https://ieeexplore.ieee.org/iel8/8253411/8938823/11720299.pdf" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="btn btn-secondary pdf-btn"
+                   onclick="trackClick('pdf-direct', '11720299'); return true;">
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="btn-text">PDF</span>
+                </a>
+                
+                <!-- Copy Citation -->
+                <button class="btn btn-secondary citation-btn" 
+                        onclick="copyCitation('liu2026flexible')"
+                        data-tooltip="Copy BibTeX citation">
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/>
+                    <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"/>
+                  </svg>
+                  <span class="btn-text">Cite</span>
+                </button>
+                
+                <!-- Share Button -->
+                <button class="btn btn-secondary share-btn" 
+                        onclick="sharePublication('https://ieeexplore.ieee.org/abstract/document/11720299/', 'Flexible Coded Distributed Convolution Computing for Resource-Constrained Remote-Sensing CNN Inference')"
+                        data-tooltip="Share this paper">
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/>
+                  </svg>
+                  <span class="btn-text">Share</span>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Preprints -->
+          <div class="publication-section mb-12" id="preprints">
+            <div class="section-header flex items-center justify-between mb-8">
+              <h3 class="section-title text-sm font-bold text-gray-700 uppercase tracking-wider flex items-center">
+                <span class="section-indicator w-1 h-6 bg-blue-600 rounded-full mr-3"></span>
+                Preprints
+              </h3>
+              <div class="publication-badge preprint">
+                <span class="badge-icon">📄</span>
+                <span class="badge-text">Manuscript</span>
+              </div>
+            </div>
+            
             <article class="publication-card group mb-6">
               <!-- Paper Title -->
               <h4 class="paper-title">
@@ -722,6 +841,41 @@
             transition: all 0.3s ease;
           }
           
+          .publication-badge.journal {
+            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+            color: #065f46;
+          }
+
+          .publication-venue {
+            color: #374151;
+            font-size: 0.875rem;
+            font-weight: 600;
+            line-height: 1.5;
+            margin: 0 0 0.5rem;
+          }
+
+          .publication-status {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 0.125rem 0.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+          }
+
+          .publication-doi {
+            color: #6b7280;
+            font-size: 0.75rem;
+            line-height: 1.5;
+            margin: 0.5rem 0 0;
+            overflow-wrap: anywhere;
+          }
+
+          .publication-doi a {
+            color: #2563eb;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+          }
+
           .publication-badge:hover {
             transform: translateY(-1px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -1046,8 +1200,21 @@
               tan2026wireless: `@article{tan2026wireless,
                 title={Wireless Linear Computation Broadcast},
                 author={Tan, Shuo and Jafar, Syed A.},
-                journal={arXiv preprint arXiv:2608.05692},
-                year={2026}
+                journal={IEEE Transactions on Communications},
+                year={2026},
+                month=oct,
+                note={Early Access, published October 12, 2026},
+                doi={10.1109/TCOMM.2026.3742805},
+                url={https://doi.org/10.1109/TCOMM.2026.3742805}
+              }`,
+              liu2026flexible: `@article{liu2026flexible,
+                title={Flexible Coded Distributed Convolution Computing for Resource-Constrained Remote-Sensing {CNN} Inference},
+                author={Liu, Rui and Tan, Shuo and Han, Xuesong and Fu, Chuan and Luo, Fulin and Wan, Kai and Song, Linqi and Pu, Can and Li, Yong},
+                journal={IEEE Journal on Miniaturization for Air and Space Systems},
+                year={2026},
+                month=oct,
+                note={Published October 5, 2026},
+                url={https://ieeexplore.ieee.org/abstract/document/11720299/}
               }`,
               tan2026optimal: `@article{tan2026optimal,
                 title={Optimal Average Success Probabilities of Binary $(n,n-1)$ and $(n,n-2)$ Quantum Random Access Codes via a Proof of the Corresponding Conjectured Bound},
@@ -1589,5 +1756,4 @@ window.console = new Proxy(console, {
 });
 </script></body>
 </html>
-
 
