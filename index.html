@@ -234,6 +234,12 @@ html{scroll-behavior:smooth;scroll-padding-top:0}section[id],#contact,#source-wo
 .research-corner figcaption{padding:11px 15px;border-top:1px solid #d6e1ef;color:#52647b;font-size:10px;line-height:1.6;letter-spacing:.1px}
 .research-corner figcaption::before{content:'';display:inline-block;width:5px;height:5px;margin-right:7px;border-radius:50%;background:#52877d;vertical-align:middle}
 @media(max-width:640px){.research-corner-layout{flex-direction:column;gap:24px}.research-corner{flex-basis:auto}}
+.qrac-highlights{margin:18px 0 22px;padding:16px 18px;background:#f8fbff;border:1px solid #dbe7f5;border-radius:12px}
+.qrac-highlights p{margin:0;font-size:13px;line-height:1.8;color:#475569}
+.qrac-highlights p+p{margin-top:12px}
+.qrac-highlights strong{font-weight:600;color:#1e3a8a}
+.qrac-highlights .qrac-parameter{white-space:nowrap}
+@media(max-width:640px){.qrac-highlights{padding:14px}.qrac-highlights p{font-size:12px}}
 </style>
 </head>
 <body class="font-body gradient-bg min-h-screen text-gray-900 antialiased relative">
@@ -637,6 +643,11 @@ html{scroll-behavior:smooth;scroll-padding-top:0}section[id],#contact,#source-wo
               </div>
               
               <div class="wlcbc-intro"><p class="wlcbc-question">What are the fundamental limits of compressing classical bits into qubits?</p></div>
+              <div class="qrac-highlights" aria-label="QRAC research highlights">
+                <p><strong>Quantum compression.</strong> QRACs capture a fundamental tradeoff: compressing n classical bits into m qubits while retaining access to any selected bit. After more than two decades of research, exact optima had been established for only a handful of cases: <span class="qrac-parameter">(2,1)</span>, <span class="qrac-parameter">(3,1)</span>, <span class="qrac-parameter">(3,2)</span>, <span class="qrac-parameter">(4,2)</span>, and <span class="qrac-parameter">(6,2)</span>.</p>
+                <p><strong>Exact limits.</strong> We prove optimality for two infinite families, <span class="qrac-parameter">(n,n−1)</span> and <span class="qrac-parameter">(n,n−2)</span>, and newly determine the <span class="qrac-parameter">(6,3)</span> optimum: an average success probability of <span class="qrac-parameter">(1 + 1/√2)/2</span>.</p>
+                <p><strong>Efficient LP toolkit.</strong> I developed an LP computation and exact-certification toolkit. Numerical comparisons show strictly tighter upper bounds than the Nayak, Mančinska–Storgaard, and Akibue bounds for <span class="qrac-parameter">n = 30</span>, <span class="qrac-parameter">6 ≤ m &lt; 30</span>, including the high-rate regime.</p>
+              </div>
               <!-- Action Buttons -->
               <div class="action-buttons">
                 <!-- Primary arXiv Link -->
@@ -665,6 +676,10 @@ html{scroll-behavior:smooth;scroll-padding-top:0}section[id],#contact,#source-wo
                   <span class="btn-text">PDF</span>
                 </a>
                 
+                <a href="https://escholarship.org/uc/item/5910g713" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="QRAC long version on eScholarship">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h6"/></svg>
+                  <span class="btn-text">Long version</span>
+                </a>
                 <!-- Copy Citation -->
                 <button class="btn btn-secondary citation-btn" 
                         onclick="copyCitation('tan2026optimal')"
