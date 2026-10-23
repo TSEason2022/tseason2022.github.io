@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Optimal Average Success Probabilities of Binary Quantum Random Access Codes — Long Version</title>
+  <meta name="description" content="Shuo Tan and Syed A. Jafar: the long version on optimal binary quantum random access codes, with the full paper and the QRAC-LP implementation.">
+  <meta name="citation_title" content="Optimal Average Success Probabilities of Binary (n, n-1) and (n, n-2) Quantum Random Access Codes">
+  <meta name="citation_author" content="Shuo Tan">
+  <meta name="citation_author" content="Syed A. Jafar">
+  <meta name="citation_publication_date" content="2026/10/21">
+  <meta name="citation_pdf_url" content="https://tseason2022.github.io/papers/qrac/qrac-long-version.pdf">
+  <meta name="citation_abstract_html_url" content="https://tseason2022.github.io/papers/qrac/">
+  <meta name="citation_publisher" content="University of California, Irvine">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Optimal Average Success Probabilities of Binary (n, n-1) and (n, n-2) Quantum Random Access Codes">
+  <meta property="og:description" content="Long version by Shuo Tan and Syed A. Jafar. Read the paper and explore the QRAC-LP code.">
+  <meta property="og:url" content="https://tseason2022.github.io/papers/qrac/">
+  <link rel="canonical" href="https://tseason2022.github.io/papers/qrac/">
+  <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+  <style>
+    :root{color-scheme:light;--ink:#203a5d;--muted:#52647b;--blue:#2454d5;--line:#cbd9ea}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:linear-gradient(135deg,#f0f5fc,#d2e0f3 58%,#e7eef8);color:var(--ink);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:var(--blue);text-underline-offset:3px}
+    a:focus-visible{outline:3px solid #2454d5;outline-offset:5px}
+    .shell{width:min(900px,calc(100% - 48px));margin:0 auto}
+    .topbar{padding:25px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .brand{font-size:17px;font-weight:700;color:var(--ink);text-decoration:none}
+    .back{font-size:14px;text-decoration:none}
+    main{padding:44px 0 56px}
+    .paper{padding:38px 42px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.85);border-radius:22px;box-shadow:0 14px 46px #25416c0a}
+    .eyebrow{margin:0 0 14px;color:#526c91;font-size:12px;font-weight:650;letter-spacing:1.8px;text-transform:uppercase}
+    h1{margin:0 0 19px;font-size:clamp(26px,3.5vw,36px);line-height:1.3;font-weight:650;letter-spacing:-.7px;text-wrap:balance}
+    .parameter{white-space:nowrap}
+    .authors{margin:0;color:var(--ink);font-size:18px;font-weight:550}
+    .affiliation{margin:3px 0 0;color:var(--muted);font-size:14px}
+    .date{margin:12px 0 0;color:var(--muted);font-size:13px}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin:23px 0 29px}
+    .button{display:inline-flex;align-items:center;justify-content:center;padding:9px 17px;border:1px solid #c8d7ea;border-radius:9px;background:#f6f9ff;color:#28486e;text-decoration:none;font-size:14px;font-weight:600;line-height:1.6}
+    .button.primary{background:#2454d5;border-color:#2454d5;color:#fff}
+    .button:hover{box-shadow:0 4px 12px #25416c14}
+    .abstract{border-top:1px solid var(--line);padding-top:23px}
+    h2{font-size:19px;line-height:1.4;margin:0 0 13px;font-weight:650}
+    .abstract p{margin:0;color:#34465f;line-height:1.85}
+    .math{white-space:nowrap;font-family:Georgia,"Times New Roman",serif}
+    .math sup,.math sub{font-size:.7em;line-height:0}
+    .note{margin:25px 0 0;padding-top:19px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+    footer{padding:0 0 28px;font-size:12px;color:var(--muted)}
+    @media(max-width:600px){.shell{width:calc(100% - 28px)}.topbar{padding:19px 4px}.back{font-size:12px}main{padding:24px 0 30px}.paper{padding:25px 22px;border-radius:17px}h1{font-size:27px;letter-spacing:-.5px}.authors{font-size:17px}.actions{gap:9px}.button{padding:9px 12px;font-size:13px}.abstract p{font-size:15px;line-height:1.85}}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Optimal Average Success Probabilities of Binary (n, n-1) and (n, n-2) Quantum Random Access Codes","author":[{"@type":"Person","name":"Shuo Tan"},{"@type":"Person","name":"Syed A. Jafar"}],"datePublished":"2026-10-21","url":"https://tseason2022.github.io/papers/qrac/","sameAs":"https://escholarship.org/uc/item/5910g713","publisher":{"@type":"Organization","name":"University of California, Irvine"},"encoding":{"@type":"MediaObject","contentUrl":"https://tseason2022.github.io/papers/qrac/qrac-long-version.pdf","encodingFormat":"application/pdf"},"license":"https://creativecommons.org/licenses/by-nc-nd/4.0/"}
+  </script>
+</head>
+<body>
+  <div class="shell">
+    <nav class="topbar" aria-label="Site navigation">
+      <a class="brand" href="/">Shuo Tan</a>
+      <a class="back" href="/#preprints">← Back to publications</a>
+    </nav>
+    <main>
+      <article class="paper">
+        <p class="eyebrow">Long version · Preprint</p>
+        <h1>Optimal Average Success Probabilities of Binary <span class="parameter">(n, n−1)</span> and <span class="parameter">(n, n−2)</span> Quantum Random Access Codes</h1>
+        <p class="authors">Shuo Tan and Syed A. Jafar</p>
+        <p class="affiliation">Department of Electrical Engineering and Computer Science<br>University of California, Irvine</p>
+        <p class="date">Deposited in UC Irvine: Recent Work · <time datetime="2026-10-21">October 21, 2026</time></p>
+        <div class="actions" aria-label="Paper resources">
+          <a class="button primary" href="qrac-long-version.pdf">Read PDF</a>
+          <a class="button" href="https://escholarship.org/uc/item/5910g713">eScholarship</a>
+          <a class="button" href="https://github.com/TSEason2022/QRAC-LP">Code on GitHub</a>
+        </div>
+        <section class="abstract" aria-labelledby="abstract-title">
+          <h2 id="abstract-title">Abstract</h2>
+          <p>A binary <span class="math">(n, m)</span> quantum random access code (QRAC) compresses an <span class="math">n</span>-bit classical string into an <span class="math">m</span>-qubit quantum state, from which a decoder attempts to recover a randomly selected target bit. Of particular interest is the optimal average probability of success, <span class="math">P<sup>Q,avg,opt</sup><sub>n,m</sub></span>. The square-root expression <span class="math">½ + ½ √(m/n)</span> was conjectured to upper-bound this quantity, and recent constructions of <span class="math">(n, n−1)</span> QRACs by Suzuki and <span class="math">(n, n−2)</span> QRACs by Akibue et al. meet it exactly. In this work, we prove that these constructions are optimal, thereby determining <span class="math">P<sup>Q,avg,opt</sup><sub>n,n−1</sub></span> and <span class="math">P<sup>Q,avg,opt</sup><sub>n,n−2</sub></span>. The proof uses the local-to-global reconstruction framework of Lin and de Wolf, based on the pretty good measurement (PGM), together with dimensional and positive-semidefinite (PSD) constraints on the induced channel. Based on these constraints, we also derive an efficient linear-programming (LP) converse for general binary <span class="math">(n, m)</span> QRACs. We evaluate this converse in closed form for two infinite parameter families and prove that it is strictly tighter than Akibue et al.’s bound at every point in those families except <span class="math">(n, m) = (3, 1)</span>, where the two coincide.</p>
+        </section>
+        <p class="note">This is the long version archived on eScholarship. The PDF is reproduced unchanged and is available under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p>
+      </article>
+    </main>
+    <footer>© 2026 Shuo Tan</footer>
+  </div>
+</body>
+</html>
