@@ -659,6 +659,28 @@ html{scroll-behavior:smooth;scroll-padding-top:0}section[id],#contact,#source-wo
               </div>
             </div>
             
+            <article class="publication-card group mb-6" id="three-user-preprint" style="scroll-margin-top:88px">
+              <h4 class="paper-title"><a href="/papers/three-user/" class="title-link">The Upload–Broadcast Cost Region of Three-User Linear Computation</a></h4>
+              <div class="authors-section mb-4">
+                <p class="authors-list"><span class="author-name author-highlight">S. Tan</span><span class="author-separator">,</span> <span class="author-name">S. A. Jafar</span></p>
+                <div class="publication-meta"><span class="meta-item">eScholarship · New preprint</span><span class="meta-separator">•</span><span class="meta-item year">November 16, 2026</span><span class="meta-separator">•</span><span class="meta-item author-status">First Author</span></div>
+              </div>
+              <div class="wlcbc-intro"><p class="wlcbc-question">Can total upload and common broadcast be minimized simultaneously?</p><p>Three users, an initially uninformed relay, and one common broadcast for download.</p></div>
+              <div class="qrac-highlights" aria-label="Three-user computation research highlights">
+                <p><strong>Both minima. One code.</strong> For every feasible three-user linear task over any finite field, a jointly designed code minimizes total upload and attains the broadcast cost of a fully informed server. The zero-error cost-budget region is rectangular, even allowing nonlinear fixed-length codes.</p>
+                <p><strong>At most two instances.</strong> Linear codes over the original field attain the optimal corner. Explore the construction through an interactive binary example, exact finite-field algorithms, and a separate Lean formalization.</p>
+              </div>
+              <div class="action-buttons" aria-label="Three-user paper resources">
+                <a href="/papers/three-user/" class="btn btn-primary"><span class="btn-text">Technical overview</span><span aria-hidden="true">↗</span></a>
+                <a href="https://escholarship.org/uc/item/8w39n9nm" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><span class="btn-text">Preprint</span></a>
+                <a href="https://escholarship.org/content/qt8w39n9nm/qt8w39n9nm.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><span class="btn-text">PDF</span></a>
+                <a href="https://github.com/TSEason2022/The-Upload-Broadcast-Cost-Region-of-Three-User-Linear-Computation" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="Three-user computation GitHub repository"><span class="btn-text">GitHub</span></a>
+                <a href="https://github.com/TSEason2022/The-Upload-Broadcast-Cost-Region-of-Three-User-Linear-Computation/tree/main/algorithm" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="Three-user exact finite-field algorithm"><span class="btn-text">Algorithm</span></a>
+                <a href="https://github.com/TSEason2022/The-Upload-Broadcast-Cost-Region-of-Three-User-Linear-Computation/tree/main/lean" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="Three-user Lean formal proofs"><span class="btn-text">Lean proofs</span></a>
+                <button class="btn btn-secondary citation-btn" onclick="copyCitation('tan2026upload')"><span class="btn-text">Cite</span></button>
+              </div>
+            </article>
+
             <article class="publication-card group mb-6">
               <!-- Paper Title -->
               <h4 class="paper-title">
@@ -1369,6 +1391,14 @@ html{scroll-behavior:smooth;scroll-padding-top:0}section[id],#contact,#source-wo
 <dialog id="citation-dialog" class="citation-dialog" aria-labelledby="citation-title"><header><h2 id="citation-title">BibTeX citation</h2><button id="close-citation" aria-label="Close citation">×</button></header><textarea id="citation-text" aria-label="BibTeX citation text" readonly spellcheck="false"></textarea><button id="copy-citation" class="btn btn-primary">Copy BibTeX ⧉</button><p id="citation-status" role="status" aria-live="polite"></p></dialog>
 <script>
 const citations = {
+              tan2026upload: `@misc{tan2026upload,
+                title={The Upload--Broadcast Cost Region of Three-User Linear Computation},
+                author={Tan, Shuo and Jafar, Syed A.},
+                year={2026},
+                month=nov,
+                note={Preprint, University of California, Irvine},
+                url={https://escholarship.org/uc/item/8w39n9nm}
+              }`,
               tan2026wireless: `@article{tan2026wireless,
                 title={Wireless Linear Computation Broadcast},
                 author={Tan, Shuo and Jafar, Syed A.},
