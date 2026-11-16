@@ -477,9 +477,9 @@ html{scroll-behavior:smooth;scroll-padding-top:0}section[id],#contact,#source-wo
                 </p>
                 
                 <!-- Publication Meta -->
-                <p class="publication-venue">IEEE Transactions on Communications</p>
+                <p class="publication-venue">IEEE Transactions on Communications · Vol. 74, pp. 15832–15845</p>
                 <div class="publication-meta">
-                  <span class="meta-item publication-status">Early Access</span>
+                  <span class="meta-item publication-status">Published</span>
                   <span class="meta-separator">•</span>
                   <time class="meta-item publication-date" datetime="2026-10-12">October 12, 2026</time>
                   <span class="meta-separator">•</span>
@@ -709,13 +709,13 @@ html{scroll-behavior:smooth;scroll-padding-top:0}section[id],#contact,#source-wo
             <article class="publication-card group mb-6">
               <!-- Paper Title -->
               <h4 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.10414v1" 
+                <a href="https://arxiv.org/abs/2607.10414v3"
                    target="_blank" 
                    rel="noopener noreferrer"
                    class="title-link"
                    onclick="trackPublication('arxiv', '2607.10414')">
                   Optimal Average Success Probabilities of Binary (n,n-1) and (n,n-2) Quantum 
-                  Random Access Codes via a Proof of the Corresponding Conjectured Bound
+                  Random Access Codes
                 </a>
               </h4>
               
@@ -728,7 +728,7 @@ html{scroll-behavior:smooth;scroll-padding-top:0}section[id],#contact,#source-wo
                 
                 <!-- Publication Meta -->
                 <div class="publication-meta">
-                  <span class="meta-item arxiv-id">arXiv:2607.10414</span>
+                  <span class="meta-item arxiv-id">arXiv:2607.10414v3</span>
                   <span class="meta-separator">•</span>
                   <span class="meta-item year">2026</span>
                   <span class="meta-separator">•</span>
@@ -744,7 +744,7 @@ html{scroll-behavior:smooth;scroll-padding-top:0}section[id],#contact,#source-wo
               <!-- Action Buttons -->
               <div class="action-buttons">
                 <!-- Primary arXiv Link -->
-                <a href="https://arxiv.org/abs/2607.10414v1" 
+                <a href="https://arxiv.org/abs/2607.10414v3"
                    target="_blank" 
                    rel="noopener noreferrer"
                    class="btn btn-primary arxiv-btn"
@@ -758,7 +758,7 @@ html{scroll-behavior:smooth;scroll-padding-top:0}section[id],#contact,#source-wo
                 </a>
                 
                 <!-- PDF Direct Link -->
-                <a href="https://arxiv.org/pdf/2607.10414v1.pdf" 
+                <a href="https://arxiv.org/pdf/2607.10414v3"
                    target="_blank" 
                    rel="noopener noreferrer"
                    class="btn btn-secondary pdf-btn"
@@ -790,7 +790,7 @@ html{scroll-behavior:smooth;scroll-padding-top:0}section[id],#contact,#source-wo
                 
                 <!-- Share Button -->
                 <button class="btn btn-secondary share-btn" 
-                        onclick="sharePublication('https://arxiv.org/abs/2607.10414v1', 'Optimal Average Success Probabilities of Binary Quantum Random Access Codes')"
+                        onclick="sharePublication('https://arxiv.org/abs/2607.10414v3', 'Optimal Average Success Probabilities of Binary (n,n-1) and (n,n-2) Quantum Random Access Codes')"
                         data-tooltip="Share this paper">
                   <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/>
@@ -1430,7 +1430,8 @@ const citations = {
                 journal={IEEE Transactions on Communications},
                 year={2026},
                 month=oct,
-                note={Early Access, published October 12, 2026},
+                volume={74},
+                pages={15832--15845},
                 doi={10.1109/TCOMM.2026.3742805},
                 url={https://doi.org/10.1109/TCOMM.2026.3742805}
               }`,
@@ -1444,10 +1445,12 @@ const citations = {
                 url={https://ieeexplore.ieee.org/abstract/document/11720299/}
               }`,
               tan2026optimal: `@article{tan2026optimal,
-                title={Optimal Average Success Probabilities of Binary $(n,n-1)$ and $(n,n-2)$ Quantum Random Access Codes via a Proof of the Corresponding Conjectured Bound},
+                title={Optimal Average Success Probabilities of Binary $(n,n-1)$ and $(n,n-2)$ Quantum Random Access Codes},
                 author={Tan, Shuo and Jafar, Syed A.},
                 journal={arXiv preprint arXiv:2607.10414},
-                year={2026}
+                year={2026},
+                note={Version 3, revised October 23, 2026},
+                url={https://arxiv.org/abs/2607.10414v3}
               }`,
               tan2024flexible: `@article{tan2024flexible,
                 title={Flexible Coded Distributed Convolution Computing for Enhanced Straggler Resilience and Numerical Stability in Distributed CNNs},
